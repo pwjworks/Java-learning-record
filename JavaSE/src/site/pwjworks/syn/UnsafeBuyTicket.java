@@ -19,18 +19,18 @@ class BuyTicket implements Runnable {
         while (flag) {
             try {
                 buy();
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
 
-    private void buy() throws InterruptedException {
+    private synchronized void buy() throws InterruptedException {
         if (ticketNums <= 0) {
             flag = false;
             return;
         }
-        Thread.sleep(100);
         System.out.println(Thread.currentThread().getName() + "拿到" + ticketNums--);
     }
 }

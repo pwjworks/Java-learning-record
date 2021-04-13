@@ -1,16 +1,13 @@
 package site.pwjworks.syn;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
-public class UnsafeList {
+public class testJUC {
     public static void main(String[] args) throws InterruptedException {
-        List<String> list = new ArrayList<>();
+        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
         for (int i = 0; i < 10000; i++) {
             new Thread(() -> {
-                synchronized (list) {
-                    list.add(Thread.currentThread().getName());
-                }
+                list.add(Thread.currentThread().getName());
             }).start();
         }
         Thread.sleep(3000);
