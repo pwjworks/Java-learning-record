@@ -1,4 +1,4 @@
-package site.pwjworks.callback;
+package site.pwjworks.corejava.callback;
 
 import javax.swing.*;
 

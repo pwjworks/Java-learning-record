@@ -1,4 +1,4 @@
-package site.pwjworks.myenum;
+package site.pwjworks.corejava.myenum;
 
 import java.util.Scanner;
 

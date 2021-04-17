@@ -1,4 +1,4 @@
-package site.pwjworks.wrapper;
+package site.pwjworks.corejava.wrapper;
 
 public class IntegerTest {
     public static void main(String[] args) {

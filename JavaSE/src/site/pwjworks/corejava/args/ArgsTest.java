@@ -1,4 +1,4 @@
-package site.pwjworks.args;
+package site.pwjworks.corejava.callback.args;
 
 public class ArgsTest {
     public static double max(double... values) {

@@ -1,4 +1,4 @@
-package site.pwjworks.myinterface;
+package site.pwjworks.corejava.myinterface;
 
 import java.util.Arrays;
 

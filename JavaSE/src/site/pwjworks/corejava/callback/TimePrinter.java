@@ -1,4 +1,4 @@
-package site.pwjworks.callback;
+package site.pwjworks.corejava.callback;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
