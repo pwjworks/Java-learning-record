@@ -1,4 +1,4 @@
-package site.pwjworks.syn;
+package site.pwjworks.thread.syn;
 
 public class UnsafeBank {
     public static void main(String[] args) {

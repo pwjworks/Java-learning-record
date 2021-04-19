@@ -1,4 +1,4 @@
-package site.pwjworks.syn;
+package site.pwjworks.thread.syn;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 

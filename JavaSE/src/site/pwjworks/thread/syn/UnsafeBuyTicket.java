@@ -1,4 +1,4 @@
-package site.pwjworks.syn;
+package site.pwjworks.thread.syn;
 
 public class UnsafeBuyTicket {
     public static void main(String[] args) {
