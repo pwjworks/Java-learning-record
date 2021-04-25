@@ -45,4 +45,12 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
     <servlet-name>s4</servlet-name>
     <url-pattern>/s4</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>s5</servlet-name>
+    <servlet-class>site.pwjworks.ServletDemo5</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s5</servlet-name>
+    <url-pattern>/s5</url-pattern>
+  </servlet-mapping>
 </web-app>
