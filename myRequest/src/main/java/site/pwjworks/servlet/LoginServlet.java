@@ -6,21 +6,26 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("enter get");
 
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        System.out.println(username + ":" + password);
-
-        resp.sendRedirect("/response_war/success.jsp");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        String[] hobbies = req.getParameterValues("hobby");
+        System.out.println("=================");
+        System.out.println(username);
+        System.out.println(password);
+        System.out.println(Arrays.toString(hobbies));
+        System.out.println("=================");
+
+        System.out.println(req.getContextPath());
+        req.getRequestDispatcher("/success.jsp").forward(req, resp);
     }
 }

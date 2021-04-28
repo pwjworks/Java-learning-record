@@ -1,22 +1,27 @@
 package site.pwjworks.servlet;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
-public class LoginServlet extends HttpServlet {
+public class CookieDemo01 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("enter get");
+        PrintWriter out = resp.getWriter();
 
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        System.out.println(username + ":" + password);
+        Cookie[] cookies = req.getCookies();
+        if (cookies != null) {
 
-        resp.sendRedirect("/response_war/success.jsp");
+        } else {
+            out.write("这是您第一次访问本站");
+        }
+        Cookie cookie = new Cookie("name", "pwj");
+        resp.addCookie(cookie);
     }
 
     @Override
